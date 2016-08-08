@@ -10,6 +10,8 @@ Library for easy HTML5 canvas development.
 
 ## Circle
 
+[jsfiddle](https://jsfiddle.net/jshacker/m218j45r/)
+
 ```
 var circle = new Circle();
 
