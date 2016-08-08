@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/IAmAnubhavSaini/canvas-js.svg?branch=master)](https://travis-ci.org/IAmAnubhavSaini/canvas-js)
+[![Build Status](https://travis-ci.org/IAmAnubhavSaini/canvas-js.svg?branch=master)](https://travis-ci.org/IAmAnubhavSaini/canvas-js) [![Build Status](https://drone.io/github.com/IAmAnubhavSaini/canvas-js/status.png)](https://drone.io/github.com/IAmAnubhavSaini/canvas-js/latest)
 
 -----
 
