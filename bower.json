@@ -5,7 +5,7 @@
     "Anubhav Saini <iamanubhavsaini@gmail.com>"
   ],
   "description": "Library for HTML 5 Canvas",
-  "main": "canvas-js-lib.js",
+  "main": "src/canvas-js-lib.js",
   "keywords": [
     "html5",
     "canvas",

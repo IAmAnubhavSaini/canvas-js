@@ -1,0 +1,48 @@
+{
+  "name": "canvas-js",
+  "version": "1.0.0",
+  "description": "Library for HTML5 canvas.",
+  "main": "src/canvas-js-lib.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IAmAnubhavSaini/canvas-js.git"
+  },
+  "keywords": [
+    "canvas",
+    "html5"
+  ],
+  "author": "Anubhav Saini <IAmAnubhavSaini@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IAmAnubhavSaini/canvas-js/issues"
+  },
+  "homepage": "https://github.com/IAmAnubhavSaini/canvas-js#readme",
+  "dependencies": {
+   "blanket": "*",
+   "bootstrap": "*",
+   "chai": "*",
+   "jquery": "*",
+   "mocha": "*"
+ },
+ "devDependencies": {
+   "grunt": "*",
+   "grunt-autoprefixer": "*",
+   "grunt-bootlint": "*",
+   "grunt-contrib-copy": "*",
+   "grunt-contrib-cssmin": "*",
+   "grunt-haml2html": "*",
+   "grunt-contrib-imagemin": "*",
+   "grunt-contrib-jasmine": "*",
+   "grunt-contrib-jshint": "*",
+   "grunt-contrib-nodeunit": "*",
+   "grunt-contrib-sass": "*",
+   "grunt-contrib-uglify": "*",
+   "grunt-text-replace": "*"
+ }
+}
