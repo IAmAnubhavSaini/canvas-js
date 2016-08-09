@@ -10,7 +10,7 @@ Library for easy HTML5 canvas development.
 
 ## Circle
 
-[jsfiddle](https://jsfiddle.net/jshacker/m218j45r/)
+[jsfiddle](https://jsfiddle.net/jshacker/Lu3up6j0/) [older API](https://jsfiddle.net/jshacker/m218j45r/)
 
 ```
 var circle = new Circle();
@@ -20,13 +20,23 @@ var circle = new Circle();
 // radius is a number
 // at finally fills the circle at x, y co-ordinates.
 
-circle.in(context).with(pattern).of(radius).at(x, y);
+circle.in(context).fillWith(pattern).of(radius).fillAt(x, y);
+
+---
+
+// context is 2D context of the canvas element of interest.
+// pattern is {strokePattern: pattern|gradient|color, lineWidth: number}
+// radius is a number
+// at finally draws the circle (outline/perimeter) at x, y co-ordinates.
+
+var options = { strokePattern: 'red', lineWidth: 3 };
+circle.in(context).drawWith(options).of(radius).drawAt(x, y);
 
 ```
 
 ### Because chaining is awesome.
 
-`in`, `with`, `of` and `at` return the circle object, thus chaining is possible.
+`in`, `*With`, `of` and `*At` return the circle object, thus chaining is possible.
 
 # License
 

@@ -5,22 +5,34 @@ function Circle() {
 }
 
 Circle.prototype = {
-    fillAt: function(x, y) {
+    drawAt: function(x, y) {
+        this.context.beginPath();
+        this.context.arc(x, y, this.radius, this.startAngle, this.endAngle, this.antiClockwise);
+        this.context.closePath();
+        this.context.stroke();
+        return this;
+    },
+    drawWith: function (options) {
+        this.context.strokeStyle = options.strokePattern;
+        this.context.lineWidth = options.lineWidth;
+        return this;
+    },
+    fillAt: function (x, y) {
         this.context.beginPath();
         this.context.arc(x, y, this.radius, this.startAngle, this.endAngle, this.antiClockwise);
         this.context.closePath();
         this.context.fill();
         return this;
     },
-    fillWith: function(fillPattern) {
+    fillWith: function (fillPattern) {
         this.context.fillStyle = fillPattern;
         return this;
     },
-    in: function(context) {
+    in: function (context) {
         this.context = context;
         return this;
     },
-    of: function(radius) {
+    of: function (radius) {
         this.radius = radius;
         return this;
     }

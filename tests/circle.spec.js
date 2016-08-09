@@ -1,10 +1,20 @@
 describe('A (new Circle())', function () {
     var circle;
+    var context;
     beforeEach(function () {
         circle = new Circle();
+        context = {
+            name: 'context',
+            beginPath: function () {},
+            closePath: function () {},
+            arc: function () {},
+            fill: function () {},
+            stroke: function () {}
+        };
     });
     afterEach(function () {
         circle = null;
+        context = null;
     });
     it('.startAngle is equals to 0', function () {
         expect(circle.startAngle).toBe(0);
@@ -23,8 +33,13 @@ describe('A (new Circle())', function () {
     });
     it('.fillWith(pattern) without setting up context via in() throws up error.', function () {
         expect(function () {
-            circle.fillWith('red')
+            circle.fillWith('red');
         }).toThrowError('undefined is not an object (evaluating \'this.context.fillStyle = fillPattern\')');
+    });
+    it('.drawWith(pattern) without setting up context via in() throws up error.', function () {
+        expect(function () {
+            circle.drawWith({strokePattern: 'red', lineWidth: 3});
+        }).toThrowError('undefined is not an object (evaluating \'this.context.strokeStyle = options.strokePattern\')');
     });
     it('.in(context).fillWith(pattern) sets up correct pattern.', function () {
         var context = { name: 'context' };
@@ -37,19 +52,6 @@ describe('A (new Circle())', function () {
     });
 
     describe('has context such that', function () {
-        var context;
-        beforeEach(function () {
-            context = {
-                name: 'context',
-                beginPath: function () {},
-                closePath: function () {},
-                arc: function () {},
-                fill: function () {}
-            };
-        });
-        afterEach(function () {
-            context = null;
-        });
         it('fillAt() calls context.beginPath()', function () {
             spyOn(context, 'beginPath');
             circle.in(context).fillAt(10, 10);
@@ -74,32 +76,50 @@ describe('A (new Circle())', function () {
             expect(context.fill).toHaveBeenCalled();
             expect(context.fill).toHaveBeenCalledTimes(1);
         });
+        it('drawAt() calls context.beginPath()', function () {
+            spyOn(context, 'beginPath');
+            circle.in(context).drawAt(10, 10);
+            expect(context.beginPath).toHaveBeenCalled();
+            expect(context.beginPath).toHaveBeenCalledTimes(1);
+        });
+        it('drawAt() calls context.closePath()', function () {
+            spyOn(context, 'closePath');
+            circle.in(context).drawAt(10, 10);
+            expect(context.closePath).toHaveBeenCalled();
+            expect(context.closePath).toHaveBeenCalledTimes(1);
+        });
+        it('drawAt() calls context.arc()', function () {
+            spyOn(context, 'arc');
+            circle.in(context).drawAt(10, 10);
+            expect(context.arc).toHaveBeenCalled();
+            expect(context.arc).toHaveBeenCalledTimes(1);
+        });
+        it('drawAt() calls context.fill()', function () {
+            spyOn(context, 'stroke');
+            circle.in(context).drawAt(10, 10);
+            expect(context.stroke).toHaveBeenCalled();
+            expect(context.stroke).toHaveBeenCalledTimes(1);
+        });
     });
     describe('has functions such that calling them returns same circle object', function () {
-        var context;
-        beforeEach(function () {
-            context = {
-                name: 'context',
-                beginPath: function () {},
-                closePath: function () {},
-                arc: function () {},
-                fill: function () {}
-            };
+        it('drawAt(x, y) returns circle object', function () {
+            expect(circle.in(context).drawAt(10, 20)).toBe(circle);
         });
-        afterEach(function () {
-            context = null;
-        });
-        it('in(context) returns circle object', function () {
-            expect(circle.in(context)).toBe(circle);
-        });
-        it('fillWith(pattern) returns circle object', function () {
-            expect(circle.in(context).fillWith('red')).toBe(circle);
-        });
-        it('of(radius) returns circle object', function () {
-            expect(circle.of(10)).toBe(circle);
+        it('drawWith(pattern) returns circle object', function () {
+            expect(circle.in(context).drawWith({ strokePattern: 'red', lineWidth: 3})).toBe(circle);
         });
         it('fillAt(x, y) returns circle object', function () {
             expect(circle.in(context).fillAt(10, 20)).toBe(circle);
         });
+        it('fillWith(pattern) returns circle object', function () {
+            expect(circle.in(context).fillWith('red')).toBe(circle);
+        });
+        it('in(context) returns circle object', function () {
+            expect(circle.in(context)).toBe(circle);
+        });
+        it('of(radius) returns circle object', function () {
+            expect(circle.of(10)).toBe(circle);
+        });
+
     });
 });
