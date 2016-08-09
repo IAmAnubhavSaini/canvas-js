@@ -5,23 +5,23 @@ function Circle() {
 }
 
 Circle.prototype = {
-    in: function(context) {
-        this.context = context;
-        return this;
-    },
-    with: function(fillPattern) {
-        this.context.fillStyle = fillPattern;
-        return this;
-    },
-    of: function(radius) {
-        this.radius = radius;
-        return this;
-    },
-    at: function(x, y) {
+    fillAt: function(x, y) {
         this.context.beginPath();
         this.context.arc(x, y, this.radius, this.startAngle, this.endAngle, this.antiClockwise);
         this.context.closePath();
         this.context.fill();
+        return this;
+    },
+    fillWith: function(fillPattern) {
+        this.context.fillStyle = fillPattern;
+        return this;
+    },
+    in: function(context) {
+        this.context = context;
+        return this;
+    },
+    of: function(radius) {
+        this.radius = radius;
         return this;
     }
 };

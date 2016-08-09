@@ -21,14 +21,14 @@ describe('A (new Circle())', function () {
         expect(circle.context).toBe(context);
         expect(circle.context.name).toBe('context');
     });
-    it('.with(pattern) without setting up context via in() throws up error.', function () {
+    it('.fillWith(pattern) without setting up context via in() throws up error.', function () {
         expect(function () {
-            circle.with('red')
+            circle.fillWith('red')
         }).toThrowError('undefined is not an object (evaluating \'this.context.fillStyle = fillPattern\')');
     });
-    it('.in(context).with(pattern) sets up correct pattern.', function () {
+    it('.in(context).fillWith(pattern) sets up correct pattern.', function () {
         var context = { name: 'context' };
-        circle.in(context).with('red');
+        circle.in(context).fillWith('red');
         expect(circle.context.fillStyle).toBe('red');
     });
     it('.of(radius) sets up radius property.', function () {
@@ -50,27 +50,27 @@ describe('A (new Circle())', function () {
         afterEach(function () {
             context = null;
         });
-        it('at() calls context.beginPath()', function () {
+        it('fillAt() calls context.beginPath()', function () {
             spyOn(context, 'beginPath');
-            circle.in(context).at(10, 10);
+            circle.in(context).fillAt(10, 10);
             expect(context.beginPath).toHaveBeenCalled();
             expect(context.beginPath).toHaveBeenCalledTimes(1);
         });
-        it('at() calls context.closePath()', function () {
+        it('fillAt() calls context.closePath()', function () {
             spyOn(context, 'closePath');
-            circle.in(context).at(10, 10);
+            circle.in(context).fillAt(10, 10);
             expect(context.closePath).toHaveBeenCalled();
             expect(context.closePath).toHaveBeenCalledTimes(1);
         });
-        it('at() calls context.arc()', function () {
+        it('fillAt() calls context.arc()', function () {
             spyOn(context, 'arc');
-            circle.in(context).at(10, 10);
+            circle.in(context).fillAt(10, 10);
             expect(context.arc).toHaveBeenCalled();
             expect(context.arc).toHaveBeenCalledTimes(1);
         });
-        it('at() calls context.fill()', function () {
+        it('fillAt() calls context.fill()', function () {
             spyOn(context, 'fill');
-            circle.in(context).at(10, 10);
+            circle.in(context).fillAt(10, 10);
             expect(context.fill).toHaveBeenCalled();
             expect(context.fill).toHaveBeenCalledTimes(1);
         });
@@ -92,14 +92,14 @@ describe('A (new Circle())', function () {
         it('in(context) returns circle object', function () {
             expect(circle.in(context)).toBe(circle);
         });
-        it('with(pattern) returns circle object', function () {
-            expect(circle.in(context).with('red')).toBe(circle);
+        it('fillWith(pattern) returns circle object', function () {
+            expect(circle.in(context).fillWith('red')).toBe(circle);
         });
         it('of(radius) returns circle object', function () {
             expect(circle.of(10)).toBe(circle);
         });
-        it('at(x, y) returns circle object', function () {
-            expect(circle.in(context).at(10, 20)).toBe(circle);
+        it('fillAt(x, y) returns circle object', function () {
+            expect(circle.in(context).fillAt(10, 20)).toBe(circle);
         });
     });
 });
