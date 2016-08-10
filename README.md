@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/IAmAnubhavSaini/canvas-js.svg?branch=master)](https://travis-ci.org/IAmAnubhavSaini/canvas-js) 
+[![Build Status](https://travis-ci.org/IAmAnubhavSaini/canvas-js.svg?branch=master)](https://travis-ci.org/IAmAnubhavSaini/canvas-js)
 
 -----
 
@@ -31,6 +31,30 @@ circle.in(context).fillWith(pattern).of(radius).fillAt(x, y);
 
 var options = { strokePattern: 'red', lineWidth: 3 };
 circle.in(context).drawWith(options).of(radius).drawAt(x, y);
+
+```
+
+### NodeJS example
+
+```
+
+canvas-js (master) $ node
+> var canvas = require('./src/canvas-js-lib')
+undefined
+> canvas
+{ Circle: [Function: Circle] }
+> var c = new canvas.Circle()
+undefined
+> c
+{ startAngle: 0,
+  endAngle: 6.283185307179586,
+  antiClockwise: false }
+> c.in('context')
+{ startAngle: 0,
+  endAngle: 6.283185307179586,
+  antiClockwise: false,
+  context: 'context' }
+>
 
 ```
 

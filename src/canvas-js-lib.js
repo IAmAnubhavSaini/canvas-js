@@ -5,6 +5,13 @@ function Circle() {
 }
 
 Circle.prototype = {
+    draw: function (inContext, ofRadius, withPattern, atPosition /* array */) {
+        this.in(inContext);
+        this.of(ofRadius);
+        this.drawWith(withPattern);
+        this.drawAt.apply(this, atPosition);
+        return this;
+    },
     drawAt: function(x, y) {
         this.context.beginPath();
         this.context.arc(x, y, this.radius, this.startAngle, this.endAngle, this.antiClockwise);
@@ -15,6 +22,13 @@ Circle.prototype = {
     drawWith: function (options) {
         this.context.strokeStyle = options.strokePattern;
         this.context.lineWidth = options.lineWidth;
+        return this;
+    },
+    fill: function (inContext, ofRadius, withPattern, atPosition /* [10, 10] */) {
+        this.in(inContext);
+        this.of(ofRadius);
+        this.fillWith(withPattern);
+        this.fillAt.apply(this, atPosition);
         return this;
     },
     fillAt: function (x, y) {
