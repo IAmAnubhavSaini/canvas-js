@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/IAmAnubhavSaini/canvas-js.svg?branch=master)](https://travis-ci.org/IAmAnubhavSaini/canvas-js) [![Build Status](https://drone.io/github.com/IAmAnubhavSaini/canvas-js/status.png)](https://drone.io/github.com/IAmAnubhavSaini/canvas-js/latest)
+[![Build Status](https://travis-ci.org/IAmAnubhavSaini/canvas-js.svg?branch=master)](https://travis-ci.org/IAmAnubhavSaini/canvas-js) 
 
 -----
 
@@ -37,6 +37,15 @@ circle.in(context).drawWith(options).of(radius).drawAt(x, y);
 ### Because chaining is awesome.
 
 `in`, `*With`, `of` and `*At` return the circle object, thus chaining is possible.
+
+# Including in project
+
+```
+npm install --save canvas-js
+
+bower install canvas-js
+
+```
 
 # License
 
