@@ -1,10 +1,11 @@
 function Circle() {
-    this.startAngle = 0;
-    this.endAngle = 2 * Math.PI;
-    this.antiClockwise = false; /* not needed for circle */
+    // antiClockwise is not required for the circle as arc has to be 360 degree.
 }
 
 Circle.prototype = {
+    startAngle: 0,
+    endAngle: 2 * Math.PI,
+    antiClockwise: false,
     draw: function (inContext, ofRadius, withPattern, atPosition /* array */) {
         this.in(inContext);
         this.of(ofRadius);
