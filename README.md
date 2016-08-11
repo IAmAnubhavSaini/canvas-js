@@ -1,8 +1,4 @@
-[![Build Status](https://travis-ci.org/IAmAnubhavSaini/canvas-js.svg?branch=master)](https://travis-ci.org/IAmAnubhavSaini/canvas-js)
-
-<img src="https://david-dm.org/iamanubhavsaini/canvas-js.svg" />
-
-<img src="https://david-dm.org/iamanubhavsaini/canvas-js/dev-status.svg" />
+[![Build Status](https://travis-ci.org/IAmAnubhavSaini/canvas-js.svg?branch=master)](https://travis-ci.org/IAmAnubhavSaini/canvas-js) <img src="https://badge.fury.io/js/canvas-js.svg" /> <img src="https://david-dm.org/iamanubhavsaini/canvas-js.svg" /> <img src="https://david-dm.org/iamanubhavsaini/canvas-js/dev-status.svg" />
 
 -----
 
