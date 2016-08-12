@@ -2,6 +2,10 @@
 
 -----
 
+[![NPM](https://nodei.co/npm/canvas-js.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/canvas-js/)
+
+-----
+
 # canvas-js
 
 Library for easy HTML5 canvas development.
