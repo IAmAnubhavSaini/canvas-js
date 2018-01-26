@@ -1,8 +1,8 @@
 {
   "name": "canvas-js",
-  "homepage": "https://github.com/IAmAnubhavSaini/canvas-js",
+  "homepage": "https://github.com/gitfaf/canvas-js",
   "authors": [
-    "Anubhav Saini <iamanubhavsaini@gmail.com>"
+    "Git Faf <git.faf@gmail.com>"
   ],
   "description": "Library for HTML 5 Canvas",
   "main": "src/canvas-js-lib.js",

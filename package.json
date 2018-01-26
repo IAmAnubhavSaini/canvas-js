@@ -1,48 +1,34 @@
 {
   "name": "canvas-js",
-  "version": "2.3.0",
+  "version": "3.0.0",
   "description": "Library for HTML5 canvas.",
   "main": "src/canvas-js-lib.js",
-  "directories": {
-    "test": "tests"
-  },
   "scripts": {
-    "test": "grunt"
+    "test": "jasmine"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/IAmAnubhavSaini/canvas-js.git"
+    "url": "git+https://github.com/gitfaf/canvas-js.git"
   },
   "keywords": [
     "canvas",
-    "html5"
+    "html5",
+    "canvas library"
   ],
-  "author": "Anubhav Saini <IAmAnubhavSaini@gmail.com>",
+  "author": "Git Faf <git.faf@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/IAmAnubhavSaini/canvas-js/issues"
+    "url": "https://github.com/gitfaf/canvas-js/issues"
   },
-  "homepage": "https://github.com/IAmAnubhavSaini/canvas-js#readme",
-  "dependencies": {
-   "blanket": "*",
-   "bootstrap": "*",
-   "chai": "*",
-   "jquery": "*",
-   "mocha": "*"
- },
- "devDependencies": {
-   "grunt": "*",
-   "grunt-autoprefixer": "*",
-   "grunt-bootlint": "*",
-   "grunt-contrib-copy": "*",
-   "grunt-contrib-cssmin": "*",
-   "grunt-haml2html": "*",
-   "grunt-contrib-imagemin": "*",
-   "grunt-contrib-jasmine": "*",
-   "grunt-contrib-jshint": "*",
-   "grunt-contrib-nodeunit": "*",
-   "grunt-contrib-sass": "*",
-   "grunt-contrib-uglify": "*",
-   "grunt-text-replace": "*"
- }
+  "homepage": "https://github.com/gitfaf/canvas-js#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.16.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "jasmine": "^2.9.0"
+  }
 }
