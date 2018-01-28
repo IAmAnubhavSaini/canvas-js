@@ -6,10 +6,10 @@ class Circle {
         this.antiClockwise = false
     }
 
-    draw (ofRadius, withPattern, atPosition /* array */) {
+    draw (ofRadius, withPattern, atPosition) {
         this.of(ofRadius)
         this.drawWith(withPattern)
-        this.drawAt.apply(this, atPosition)
+        this.drawAt.apply(this, atPosition.toArray())
         return this
     }
 
@@ -27,10 +27,10 @@ class Circle {
         return this
     }
 
-    fill (ofRadius, withPattern, atPosition /* [10, 10] */) {
+    fill (ofRadius, withPattern, atPosition) {
         this.of(ofRadius)
         this.fillWith(withPattern)
-        this.fillAt.apply(this, atPosition)
+        this.fillAt.apply(this, atPosition.toArray())
         return this
     }
 
