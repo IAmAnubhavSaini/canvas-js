@@ -1,6 +1,7 @@
 /* global describe it afterEach beforeEach expect spyOn require */
 
 const Circle = require('../src/Circle')
+const Position2D = require('../src/Position2D')
 
 describe('A (new Circle())', function () {
     var context
@@ -69,7 +70,7 @@ describe('A (new Circle())', function () {
 
     it('.fill(20, \'red\', [10, 10]) sets up all properties properly', function () {
         let circle = new Circle(context)
-        circle.fill(20, 'red', [10, 10])
+        circle.fill(20, 'red', new Position2D(10, 10))
         expect(circle.radius).toBe(20)
         expect(circle.context.fillStyle).toBe('red')
         expect(circle.context).toBe(context)
@@ -78,7 +79,7 @@ describe('A (new Circle())', function () {
 
     it('.draw(20, {strokePattern: \'red\', lineWidth: 3}, [10, 10]) sets up all properties properly', function () {
         let circle = new Circle(context)
-        circle.draw(10, { strokePattern: 'red', lineWidth: 3 }, [10, 10])
+        circle.draw(10, { strokePattern: 'red', lineWidth: 3 }, new Position2D(10, 10))
         expect(circle.radius).toBe(10)
         expect(circle.context.strokeStyle).toBe('red')
         expect(circle.context.lineWidth).toBe(3)
@@ -92,7 +93,7 @@ describe('A (new Circle())', function () {
             spyOn(context, 'closePath')
             spyOn(context, 'arc')
             spyOn(context, 'fill')
-            expect(circle.fill(20, 'red', [10, 10])).toBe(circle)
+            expect(circle.fill(20, 'red', new Position2D(10, 10))).toBe(circle)
             expect(context.beginPath).toHaveBeenCalled()
             expect(context.beginPath).toHaveBeenCalledTimes(1)
             expect(context.closePath).toHaveBeenCalled()
@@ -141,7 +142,7 @@ describe('A (new Circle())', function () {
             spyOn(context, 'closePath')
             spyOn(context, 'arc')
             spyOn(context, 'stroke')
-            expect(circle.draw(20, { strokePattern: 'red', lineWidth: 3 }, [10, 10])).toBe(circle)
+            expect(circle.draw(20, { strokePattern: 'red', lineWidth: 3 }, new Position2D(10, 10))).toBe(circle)
             expect(context.beginPath).toHaveBeenCalled()
             expect(context.beginPath).toHaveBeenCalledTimes(1)
             expect(context.closePath).toHaveBeenCalled()
@@ -187,7 +188,7 @@ describe('A (new Circle())', function () {
     describe('has functions such that calling them returns same circle object', function () {
         it('draw(in, of, with, at) returns circle object', function () {
             let circle = new Circle(context)
-            expect(circle.draw(20, { strokePattern: 'red', lineWidth: 3 }, [10, 10])).toBe(circle)
+            expect(circle.draw(20, { strokePattern: 'red', lineWidth: 3 }, new Position2D(10, 10))).toBe(circle)
         })
 
         it('drawAt(x, y) returns circle object', function () {
@@ -202,7 +203,7 @@ describe('A (new Circle())', function () {
 
         it('fill(in, of, with, at) returns circle object', function () {
             let circle = new Circle(context)
-            expect(circle.fill(20, 'red', [10, 10])).toBe(circle)
+            expect(circle.fill(20, 'red', new Position2D(10, 10))).toBe(circle)
         })
 
         it('fillAt(x, y) returns circle object', function () {

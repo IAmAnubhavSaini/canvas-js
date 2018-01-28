@@ -1,6 +1,6 @@
 {
   "name": "canvas-js",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Library for HTML5 canvas.",
   "main": "src/canvas-js-lib.js",
   "scripts": {

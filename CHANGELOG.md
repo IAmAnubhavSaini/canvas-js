@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 4
+
+- Introduce Position2D and Position3D
+- Use Position2D object in Circle.js
+
 ## Version 3
 
 - Update .editorconfig
