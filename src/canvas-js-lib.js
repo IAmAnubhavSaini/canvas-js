@@ -54,5 +54,5 @@ Circle.prototype = {
 };
 
 module.exports = {
-    Circle: Circle
+    Circle
 };

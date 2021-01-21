@@ -1,18 +1,10 @@
-[![Build Status](https://travis-ci.org/IAmAnubhavSaini/canvas-js.svg?branch=master)](https://travis-ci.org/IAmAnubhavSaini/canvas-js) <img src="https://badge.fury.io/js/canvas-js.svg" /> <img src="https://david-dm.org/iamanubhavsaini/canvas-js.svg" /> <img src="https://david-dm.org/iamanubhavsaini/canvas-js/dev-status.svg" />
-
------
-
-[![NPM](https://nodei.co/npm/canvas-js.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/canvas-js/)
-
------
-
 # canvas-js
 
 Library for easy HTML5 canvas development.
 
-# APIs
+## APIs
 
-## Circle
+### Circle
 
 [jsfiddle](https://jsfiddle.net/jshacker/Lu3up6j0/) [older API](https://jsfiddle.net/jshacker/m218j45r/)
 
@@ -38,7 +30,7 @@ circle.in(context).drawWith(options).of(radius).drawAt(x, y);
 
 ```
 
-### NodeJS example
+#### NodeJS example
 
 ```
 
@@ -62,11 +54,11 @@ undefined
 
 ```
 
-### Because chaining is awesome.
+#### Because chaining is awesome.
 
 `in`, `*With`, `of` and `*At` return the circle object, thus chaining is possible.
 
-# Including in project
+## Including in project
 
 ```
 npm install --save canvas-js
@@ -75,6 +67,6 @@ bower install canvas-js
 
 ```
 
-# License
+## License
 
-MIT &copy; Anubhav Saini 2016
+MIT &copy; Anubhav Saini 2016-2021
