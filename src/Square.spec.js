@@ -36,6 +36,7 @@ describe('Square', () => {
                 expect(sideA).toEqual(10);
                 done();
             }
+
             const context = {
                 fillRect
             };
@@ -51,6 +52,7 @@ describe('Square', () => {
                 expect(sideA).toEqual(14);
                 done();
             }
+
             const context = {
                 fillRect
             };

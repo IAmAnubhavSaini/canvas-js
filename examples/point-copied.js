@@ -7,4 +7,16 @@ class Point2d {
     toString() {
         return `{${this.x}, ${this.y}}`; // {x, y}
     }
+
+    distanceFrom(other2DPoint) {
+        return Math.sqrt(Math.pow(this.x - other2DPoint.x, 2) + Math.pow(this.y - other2DPoint.y, 2));
+    }
+
+    translate(scalar) {
+        return new Point2d(this.x * scalar, this.y * scalar);
+    }
+
+    flip() {
+        return new Point2d(this.y, this.x);
+    }
 }

@@ -1,29 +1,31 @@
 {
-    "name": "canvas-js",
-    "version": "5.1.0",
-    "description": "Library for HTML5 canvas.",
-    "main": "src/canvas-js-lib.js",
-    "directories": {
-        "test": "tests"
-    },
-    "scripts": {
-        "test": "jasmine"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/IAmAnubhavSaini/canvas-js.git"
-    },
-    "keywords": [
-        "canvas",
-        "html5"
-    ],
-    "author": "Anubhav Saini <IAmAnubhavSaini@gmail.com>",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/IAmAnubhavSaini/canvas-js/issues"
-    },
-    "homepage": "https://github.com/IAmAnubhavSaini/canvas-js#readme",
-    "devDependencies": {
-        "jasmine": "^3.7.0"
-    }
+  "name": "canvas-js",
+  "version": "6.0.0",
+  "description": "Library for HTML5 canvas.",
+  "main": "src/canvas-js-lib.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jasmine",
+    "build": "tsc --project tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IAmAnubhavSaini/canvas-js.git"
+  },
+  "keywords": [
+    "canvas",
+    "html5"
+  ],
+  "author": "Anubhav",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IAmAnubhavSaini/canvas-js/issues"
+  },
+  "homepage": "https://github.com/IAmAnubhavSaini/canvas-js#readme",
+  "devDependencies": {
+    "@types/node": "^15.12.1",
+    "jasmine": "^3.7.0"
+  }
 }

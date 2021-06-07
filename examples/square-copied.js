@@ -4,7 +4,6 @@ class Square {
     }
 
     drawAt(point2d) {
-        console.log(point2d);
         this.context.fillRect(point2d.x, point2d.y, this.side, this.side);
         return this;
     }
