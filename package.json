@@ -1,6 +1,6 @@
 {
     "name": "canvas-js",
-    "version": "2.3.0",
+    "version": "3.0.0",
     "description": "Library for HTML5 canvas.",
     "main": "src/canvas-js-lib.js",
     "directories": {
@@ -24,6 +24,6 @@
     },
     "homepage": "https://github.com/IAmAnubhavSaini/canvas-js#readme",
     "devDependencies": {
-        "jasmine": "^3.6.4"
+        "jasmine": "^3.7.0"
     }
 }

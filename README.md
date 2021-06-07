@@ -8,7 +8,8 @@ Library for easy HTML5 canvas development.
 
 [jsfiddle](https://jsfiddle.net/jshacker/Lu3up6j0/) [older API](https://jsfiddle.net/jshacker/m218j45r/)
 
-```
+```javascript
+
 var circle = new Circle();
 
 // context is 2D context of the canvas element of interest.
@@ -18,7 +19,7 @@ var circle = new Circle();
 
 circle.in(context).fillWith(pattern).of(radius).fillAt(x, y);
 
----
+/* --- */
 
 // context is 2D context of the canvas element of interest.
 // pattern is {strokePattern: pattern|gradient|color, lineWidth: number}
@@ -32,25 +33,26 @@ circle.in(context).drawWith(options).of(radius).drawAt(x, y);
 
 #### NodeJS example
 
-```
+```javascript
 
-canvas-js (master) $ node
-> var canvas = require('./src/canvas-js-lib')
-undefined
-> canvas
-{ Circle: [Function: Circle] }
-> var c = new canvas.Circle()
-undefined
-> c
-{ startAngle: 0,
-  endAngle: 6.283185307179586,
-  antiClockwise: false }
-> c.in('context')
-{ startAngle: 0,
-  endAngle: 6.283185307179586,
-  antiClockwise: false,
-  context: 'context' }
->
+var canvas = require('./src/canvas-js-lib')
+
+canvas
+// { Circle: [Function: Circle] }
+
+var c = new canvas.Circle()
+
+c
+// { startAngle: 0,
+//   endAngle: 6.283185307179586,
+//   antiClockwise: false }
+
+c.in('context')
+// { startAngle: 0,
+//   endAngle: 6.283185307179586,
+//   antiClockwise: false,
+//   context: 'context' }
+// >
 
 ```
 
@@ -60,8 +62,9 @@ undefined
 
 ## Including in project
 
-```
-npm install --save canvas-js
+```bash
+
+npm i canvas-js
 
 bower install canvas-js
 
@@ -69,4 +72,6 @@ bower install canvas-js
 
 ## License
 
-MIT &copy; Anubhav Saini 2016-2021
+MIT 
+
+- &copy; 2016-2021 Anubhav

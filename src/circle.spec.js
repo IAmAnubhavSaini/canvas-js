@@ -1,4 +1,4 @@
-const {Circle} = require('./canvas-js-lib')
+const Circle = require('./Circle');
 
 describe('A (new Circle())', function () {
     var circle;
