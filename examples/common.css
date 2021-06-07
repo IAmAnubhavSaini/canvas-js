@@ -1,0 +1,13 @@
+body {
+    padding: 0;
+    border: thin solid #333;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#canvas {
+    height: 600px;
+    width: 600px;
+    margin: 0 auto;
+    border: thin solid red;
+}
