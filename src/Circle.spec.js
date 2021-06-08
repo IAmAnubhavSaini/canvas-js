@@ -1,5 +1,8 @@
+const {Point2d} = require("./Point2d");
+
 const Circle = require('./Circle').Circle;
 
+/* TODO: upgrade tests to use latest interfaces */
 describe('A (new Circle())', function () {
     var circle;
     var context;
@@ -64,7 +67,7 @@ describe('A (new Circle())', function () {
         expect(circle.context.name).toEqual('context');
     });
     it('.draw(20, {strokePattern: \'red\', lineWidth: 3}, [10, 10]) sets up all properties properly', function () {
-        circle.draw(10, {strokePattern: 'red', lineWidth: 3}, [10, 10]);
+        circle.draw(10, {strokePattern: 'red', lineWidth: 3}, new Point2d(10, 10));
         expect(circle.radius).toBe(10);
         expect(circle.context.strokeStyle).toBe('red');
         expect(circle.context.lineWidth).toBe(3);
@@ -73,10 +76,10 @@ describe('A (new Circle())', function () {
     });
     describe('has functions such that calling them returns same circle object', function () {
         it('draw(of, with, at) returns circle object', function () {
-            expect(circle.draw(20, {strokePattern: 'red', lineWidth: 3}, [10, 10])).toBe(circle);
+            expect(circle.draw(20, {strokePattern: 'red', lineWidth: 3}, new Point2d(10, 10))).toBe(circle);
         });
         it('drawAt(x, y) returns circle object', function () {
-            expect(circle.drawAt(10, 20)).toBe(circle);
+            expect(circle.drawAt(new Point2d(10, 20))).toBe(circle);
         });
         it('drawWith(pattern) returns circle object', function () {
             expect(circle.drawWith({strokePattern: 'red', lineWidth: 3})).toBe(circle);
@@ -85,7 +88,7 @@ describe('A (new Circle())', function () {
             expect(circle.fill(20, 'red', [10, 10])).toEqual(circle);
         });
         it('fillAt(x, y) returns circle object', function () {
-            expect(circle.fillAt(10, 20)).toBe(circle);
+            expect(circle.fillAt(new Point2d(10, 20))).toBe(circle);
         });
         it('fillWith(pattern) returns circle object', function () {
             expect(circle.fillWith('red')).toBe(circle);

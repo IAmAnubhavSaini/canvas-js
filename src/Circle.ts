@@ -1,3 +1,5 @@
+import {Point2dI} from "./Point2d";
+
 type StrokePatternT = string | CanvasGradient | CanvasPattern
 
 interface DrawPatternI {
@@ -12,15 +14,15 @@ interface CircleI {
     context: CanvasRenderingContext2D;
     radius: number;
 
-    draw(ofRadius: number, withPattern: DrawPatternI, atPosition: [number, number]): CircleI;
+    draw(ofRadius: number, withPattern: DrawPatternI, atPosition: Point2dI): CircleI;
 
-    drawAt(x: number, y: number): CircleI;
+    drawAt(point: Point2dI): CircleI;
 
     drawWith(options: DrawPatternI): CircleI;
 
-    fill(ofRadius: number, withPattern: string, atPosition: [number, number]): CircleI;
+    fill(ofRadius: number, withPattern: string, atPosition: Point2dI): CircleI;
 
-    fillAt(x: number, y: number): CircleI;
+    fillAt(point: Point2dI): CircleI;
 
     fillWith(fillPattern: StrokePatternT): CircleI;
 
@@ -42,16 +44,16 @@ class Circle implements CircleI {
         this.context = context;
     }
 
-    draw(ofRadius: number, withPattern: DrawPatternI, atPosition: [number, number]) {
+    draw(ofRadius: number, withPattern: DrawPatternI, atPosition: Point2dI) {
         this.of(ofRadius);
         this.drawWith(withPattern);
-        this.drawAt.apply(this, atPosition);
+        this.drawAt(atPosition);
         return this;
     }
 
-    drawAt(x: number, y: number) {
+    drawAt(point: Point2dI) {
         this.context.beginPath();
-        this.context.arc(x, y, this.radius, this.startAngle, this.endAngle, this.antiClockwise);
+        this.context.arc(point.x, point.y, this.radius, this.startAngle, this.endAngle, this.antiClockwise);
         this.context.closePath();
         this.context.stroke();
         return this;
@@ -63,16 +65,16 @@ class Circle implements CircleI {
         return this;
     }
 
-    fill(ofRadius: number, withPattern: string, atPosition: [number, number]) {
+    fill(ofRadius: number, withPattern: string, atPosition: Point2dI) {
         this.of(ofRadius);
         this.fillWith(withPattern);
-        this.fillAt.apply(this, atPosition);
+        this.fillAt(atPosition);
         return this;
     }
 
-    fillAt(x: number, y: number) {
+    fillAt(point: Point2dI) {
         this.context.beginPath();
-        this.context.arc(x, y, this.radius, this.startAngle, this.endAngle, this.antiClockwise);
+        this.context.arc(point.x, point.y, this.radius, this.startAngle, this.endAngle, this.antiClockwise);
         this.context.closePath();
         this.context.fill();
         return this;

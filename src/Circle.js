@@ -12,12 +12,12 @@ var Circle = /** @class */ (function () {
     Circle.prototype.draw = function (ofRadius, withPattern, atPosition) {
         this.of(ofRadius);
         this.drawWith(withPattern);
-        this.drawAt.apply(this, atPosition);
+        this.drawAt(atPosition);
         return this;
     };
-    Circle.prototype.drawAt = function (x, y) {
+    Circle.prototype.drawAt = function (point) {
         this.context.beginPath();
-        this.context.arc(x, y, this.radius, this.startAngle, this.endAngle, this.antiClockwise);
+        this.context.arc(point.x, point.y, this.radius, this.startAngle, this.endAngle, this.antiClockwise);
         this.context.closePath();
         this.context.stroke();
         return this;
@@ -30,12 +30,12 @@ var Circle = /** @class */ (function () {
     Circle.prototype.fill = function (ofRadius, withPattern, atPosition) {
         this.of(ofRadius);
         this.fillWith(withPattern);
-        this.fillAt.apply(this, atPosition);
+        this.fillAt(atPosition);
         return this;
     };
-    Circle.prototype.fillAt = function (x, y) {
+    Circle.prototype.fillAt = function (point) {
         this.context.beginPath();
-        this.context.arc(x, y, this.radius, this.startAngle, this.endAngle, this.antiClockwise);
+        this.context.arc(point.x, point.y, this.radius, this.startAngle, this.endAngle, this.antiClockwise);
         this.context.closePath();
         this.context.fill();
         return this;
