@@ -37,4 +37,4 @@ class Point2d implements Point2dI {
     }
 }
 
-module.exports = Point2d;
+export { Point2d, Point2dI };

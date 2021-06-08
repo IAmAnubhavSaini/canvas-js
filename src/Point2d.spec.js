@@ -1,4 +1,4 @@
-const Point2d = require('./Point2d');
+const Point2d = require('./Point2d').Point2d;
 
 describe('Point2d', () => {
     it('has x and y that can be set via constructor', () => {

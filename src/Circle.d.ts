@@ -32,4 +32,5 @@ declare class Circle implements CircleI {
     fillWith(fillPattern: StrokePatternT): this;
     of(radius: number): this;
 }
+export { Circle, CircleI };
 //# sourceMappingURL=Circle.d.ts.map

@@ -1,5 +1,5 @@
 const Square = require('./Square');
-const Point2d = require('./Point2d');
+const Point2d = require('./Point2d').Point2d;
 
 describe('Square', () => {
     it('the default side value is 1', () => {

@@ -1,4 +1,4 @@
-const Circle = require('./Circle');
+const Circle = require('./Circle').Circle;
 
 describe('A (new Circle())', function () {
     var circle;

@@ -1,4 +1,6 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Point2d = void 0;
 var Point2d = /** @class */ (function () {
     function Point2d(x, y) {
         if (x === void 0) { x = 0; }
@@ -20,5 +22,5 @@ var Point2d = /** @class */ (function () {
     };
     return Point2d;
 }());
-module.exports = Point2d;
+exports.Point2d = Point2d;
 //# sourceMappingURL=Point2d.js.map

@@ -89,4 +89,4 @@ class Circle implements CircleI {
     }
 }
 
-module.exports = Circle;
+export { Circle, CircleI }

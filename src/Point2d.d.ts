@@ -15,4 +15,5 @@ declare class Point2d implements Point2dI {
     translate(scalar: number): Point2d;
     flip(): Point2d;
 }
+export { Point2d, Point2dI };
 //# sourceMappingURL=Point2d.d.ts.map
