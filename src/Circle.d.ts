@@ -5,33 +5,26 @@ interface DrawPatternI {
     lineWidth: number;
 }
 interface CircleI {
-    startAngle: number;
-    endAngle: number;
-    antiClockwise: boolean;
-    context: CanvasRenderingContext2D;
-    radius: number;
-    draw(ofRadius: number, withPattern: DrawPatternI, atPosition: Point2dI): CircleI;
+    draw(withPattern: DrawPatternI, atPosition: Point2dI): CircleI;
     drawAt(point: Point2dI): CircleI;
     drawWith(options: DrawPatternI): CircleI;
-    fill(ofRadius: number, withPattern: string, atPosition: Point2dI): CircleI;
+    fill(withPattern: string, atPosition: Point2dI): CircleI;
     fillAt(point: Point2dI): CircleI;
     fillWith(fillPattern: StrokePatternT): CircleI;
-    of(radius: number): CircleI;
 }
 declare class Circle implements CircleI {
-    startAngle: number;
-    endAngle: number;
-    antiClockwise: boolean;
-    context: CanvasRenderingContext2D;
-    radius: number;
-    constructor(context: CanvasRenderingContext2D);
-    draw(ofRadius: number, withPattern: DrawPatternI, atPosition: Point2dI): this;
+    private readonly startAngle;
+    private readonly endAngle;
+    private readonly antiClockwise;
+    private readonly context;
+    private readonly radius;
+    constructor(context: CanvasRenderingContext2D, radius?: number);
+    draw(withPattern: DrawPatternI, atPosition: Point2dI): this;
     drawAt(point: Point2dI): this;
     drawWith(options: DrawPatternI): this;
-    fill(ofRadius: number, withPattern: string, atPosition: Point2dI): this;
+    fill(withPattern: string, atPosition: Point2dI): this;
     fillAt(point: Point2dI): this;
     fillWith(fillPattern: StrokePatternT): this;
-    of(radius: number): this;
 }
 export { Circle, CircleI };
 //# sourceMappingURL=Circle.d.ts.map

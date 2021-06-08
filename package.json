@@ -1,11 +1,8 @@
 {
   "name": "canvas-js",
-  "version": "6.1.0",
+  "version": "7.0.0",
   "description": "Library for HTML5 canvas.",
-  "main": "src/canvas-js-lib.js",
-  "directories": {
-    "test": "tests"
-  },
+  "main": "src/index.js",
   "scripts": {
     "test": "jasmine",
     "build": "tsc --project tsconfig.json"

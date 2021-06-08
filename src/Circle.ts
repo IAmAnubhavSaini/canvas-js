@@ -8,44 +8,35 @@ interface DrawPatternI {
 }
 
 interface CircleI {
-    startAngle: number;
-    endAngle: number;
-    antiClockwise: boolean;
-    context: CanvasRenderingContext2D;
-    radius: number;
-
-    draw(ofRadius: number, withPattern: DrawPatternI, atPosition: Point2dI): CircleI;
+    draw(withPattern: DrawPatternI, atPosition: Point2dI): CircleI;
 
     drawAt(point: Point2dI): CircleI;
 
     drawWith(options: DrawPatternI): CircleI;
 
-    fill(ofRadius: number, withPattern: string, atPosition: Point2dI): CircleI;
+    fill(withPattern: string, atPosition: Point2dI): CircleI;
 
     fillAt(point: Point2dI): CircleI;
 
     fillWith(fillPattern: StrokePatternT): CircleI;
-
-    of(radius: number): CircleI;
 }
 
 class Circle implements CircleI {
-    startAngle: number;
-    endAngle: number;
-    antiClockwise: boolean;
-    context: CanvasRenderingContext2D;
-    radius: number = 0;
+    private readonly startAngle: number;
+    private readonly endAngle: number;
+    private readonly antiClockwise: boolean;
+    private readonly context: CanvasRenderingContext2D;
+    private readonly radius: number = 1;
 
-
-    constructor(context: CanvasRenderingContext2D) {
+    constructor(context: CanvasRenderingContext2D, radius: number = 1) {
         this.startAngle = 0;
         this.endAngle = 2 * Math.PI;
         this.antiClockwise = false;
         this.context = context;
+        this.radius = radius;
     }
 
-    draw(ofRadius: number, withPattern: DrawPatternI, atPosition: Point2dI) {
-        this.of(ofRadius);
+    draw(withPattern: DrawPatternI, atPosition: Point2dI) {
         this.drawWith(withPattern);
         this.drawAt(atPosition);
         return this;
@@ -53,7 +44,7 @@ class Circle implements CircleI {
 
     drawAt(point: Point2dI) {
         this.context.beginPath();
-        this.context.arc(point.x, point.y, this.radius, this.startAngle, this.endAngle, this.antiClockwise);
+        this.context.arc(point.X, point.Y, this.radius, this.startAngle, this.endAngle, this.antiClockwise);
         this.context.closePath();
         this.context.stroke();
         return this;
@@ -65,8 +56,7 @@ class Circle implements CircleI {
         return this;
     }
 
-    fill(ofRadius: number, withPattern: string, atPosition: Point2dI) {
-        this.of(ofRadius);
+    fill(withPattern: string, atPosition: Point2dI) {
         this.fillWith(withPattern);
         this.fillAt(atPosition);
         return this;
@@ -74,7 +64,7 @@ class Circle implements CircleI {
 
     fillAt(point: Point2dI) {
         this.context.beginPath();
-        this.context.arc(point.x, point.y, this.radius, this.startAngle, this.endAngle, this.antiClockwise);
+        this.context.arc(point.X, point.Y, this.radius, this.startAngle, this.endAngle, this.antiClockwise);
         this.context.closePath();
         this.context.fill();
         return this;
@@ -84,11 +74,6 @@ class Circle implements CircleI {
         this.context.fillStyle = fillPattern;
         return this;
     }
-
-    of(radius: number) {
-        this.radius = radius;
-        return this;
-    }
 }
 
-export { Circle, CircleI }
+export {Circle, CircleI};

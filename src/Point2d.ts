@@ -1,6 +1,6 @@
 interface Point2dI {
-    x: number;
-    y: number;
+    X: number
+    Y: number
 
     toString(): string;
 
@@ -12,12 +12,20 @@ interface Point2dI {
 }
 
 class Point2d implements Point2dI {
-    x: number;
-    y: number;
+    private readonly x: number;
+    private readonly y: number;
 
     constructor(x: number = 0, y: number = 0) {
         this.x = x;
         this.y = y;
+    }
+
+    get X() {
+        return this.x;
+    }
+
+    get Y() {
+        return this.y;
     }
 
     toString() {
@@ -25,7 +33,7 @@ class Point2d implements Point2dI {
     }
 
     distanceFrom(other2DPoint: Point2dI) {
-        return Math.sqrt(Math.pow(this.x - other2DPoint.x, 2) + Math.pow(this.y - other2DPoint.y, 2));
+        return Math.sqrt(Math.pow(this.x - other2DPoint.X, 2) + Math.pow(this.y - other2DPoint.Y, 2));
     }
 
     translate(scalar: number) {
@@ -37,4 +45,4 @@ class Point2d implements Point2dI {
     }
 }
 
-export { Point2d, Point2dI };
+export {Point2d, Point2dI};

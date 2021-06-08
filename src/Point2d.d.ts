@@ -1,15 +1,17 @@
 interface Point2dI {
-    x: number;
-    y: number;
+    X: number;
+    Y: number;
     toString(): string;
     distanceFrom(other2DPoint: Point2dI): number;
     translate(scalar: number): Point2d;
     flip(): Point2d;
 }
 declare class Point2d implements Point2dI {
-    x: number;
-    y: number;
+    private readonly x;
+    private readonly y;
     constructor(x?: number, y?: number);
+    get X(): number;
+    get Y(): number;
     toString(): string;
     distanceFrom(other2DPoint: Point2dI): number;
     translate(scalar: number): Point2d;

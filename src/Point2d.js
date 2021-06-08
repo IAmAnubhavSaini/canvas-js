@@ -8,11 +8,25 @@ var Point2d = /** @class */ (function () {
         this.x = x;
         this.y = y;
     }
+    Object.defineProperty(Point2d.prototype, "X", {
+        get: function () {
+            return this.x;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Point2d.prototype, "Y", {
+        get: function () {
+            return this.y;
+        },
+        enumerable: false,
+        configurable: true
+    });
     Point2d.prototype.toString = function () {
         return "{" + this.x + ", " + this.y + "}"; // {x, y}
     };
     Point2d.prototype.distanceFrom = function (other2DPoint) {
-        return Math.sqrt(Math.pow(this.x - other2DPoint.x, 2) + Math.pow(this.y - other2DPoint.y, 2));
+        return Math.sqrt(Math.pow(this.x - other2DPoint.X, 2) + Math.pow(this.y - other2DPoint.Y, 2));
     };
     Point2d.prototype.translate = function (scalar) {
         return new Point2d(this.x * scalar, this.y * scalar);

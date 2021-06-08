@@ -55,10 +55,6 @@ describe('A (new Circle())', function () {
         circle.fillWith('red');
         expect(circle.context.fillStyle).toBe('red');
     });
-    it('.of(radius) sets up radius property.', function () {
-        circle.of(10);
-        expect(circle.radius).toBe(10);
-    });
     it(`.fill(20, 'red', [10, 10]) sets up all properties properly`, function () {
         circle.fill(20, 'red', [10, 10]);
         // expect(circle.radius).toEqual(20);
@@ -68,9 +64,6 @@ describe('A (new Circle())', function () {
     });
     it('.draw(20, {strokePattern: \'red\', lineWidth: 3}, [10, 10]) sets up all properties properly', function () {
         circle.draw(10, {strokePattern: 'red', lineWidth: 3}, new Point2d(10, 10));
-        expect(circle.radius).toBe(10);
-        expect(circle.context.strokeStyle).toBe('red');
-        expect(circle.context.lineWidth).toBe(3);
         expect(circle.context).toBe(context);
         expect(circle.context.name).toBe('context');
     });
@@ -96,9 +89,5 @@ describe('A (new Circle())', function () {
         it(`returns circle object`, function () {
             expect(circle).toBe(circle);
         });
-        it('of(radius) returns circle object', function () {
-            expect(circle.of(10)).toBe(circle);
-        });
-
     });
 });

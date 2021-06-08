@@ -1,5 +1,22 @@
 # Changes
 
+## v7
+
+- Change in Circle API
+- Updated tests
+- Change in the way we think about the code.
+    - We do not want to change a created  object.
+    - We want to create new objects if we need the internal values to be changed.
+- Change in Point2d
+    - Change of structure.
+    - The values of x and y cannot be changed after a point has been created.
+- Change in Square
+
+
+# v6.2.0 - 2021-06-08
+
+- Documentation added in doc/ directory
+
 # V6.1.0 - 2021-06-08
 
 - Readme update

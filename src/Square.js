@@ -9,7 +9,7 @@ var Square = /** @class */ (function () {
         this.context = context;
     }
     Square.prototype.drawAt = function (point2d) {
-        this.context.fillRect(point2d.x, point2d.y, this.side, this.side);
+        this.context.fillRect(point2d.X, point2d.Y, this.side, this.side);
         return this;
     };
     return Square;

@@ -9,7 +9,7 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         jasmine: {
             test: {
-                src: ['src/canvas-js-lib.js'],
+                src: ['src/index.js'],
                 options: {
                     specs: 'tests/*.spec.js',
                     helpers: 'tests/*helper.js'
