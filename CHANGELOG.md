@@ -1,5 +1,11 @@
 # Changes
 
+## v7.1.0 - 2021-06-16
+
+- Added Rectangle API (mimics Square)
+- Removed jasmine from devD
+- Removed travisCI, bower, grunt related files.
+
 ## v7
 
 - Change in Circle API

@@ -3,9 +3,9 @@
 Library for easy HTML5 canvas development.
 
 - [GitHub](https://github.com/IAmAnubhavSaini/canvas-js)
-- [NPM](https://www.npmjs.com/package/@f0c1s/canvas-js)
+- [NPM](https://www.npmjs.com/package/canvas-js)
 
-> use v7
+> use v7.1.0
 
 ## Installation
 
@@ -28,6 +28,7 @@ Check [doc/](./doc)
 - Point2d, Point2dI (interface)
 - Circle, CircleI
 - Square, SquareI
+- Rectangle, RectangleI
 
 ## Development
 
