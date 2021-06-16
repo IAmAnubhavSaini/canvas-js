@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/IAmAnubhavSaini/canvas-js#readme",
   "devDependencies": {
-    "@types/node": "^15.12.1",
-    "jasmine": "^3.7.0"
+    "@types/node": "^15.12.2"
   }
 }

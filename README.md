@@ -29,6 +29,15 @@ Check [doc/](./doc)
 - Circle, CircleI
 - Square, SquareI
 
+## Development
+
+`npm i -g npm typescript jasmine`
+
+- Why should you install typescript globally?
+    - TS is 60MBs installation. This quickly adds up if you have multiple projects that depend up on it.
+- Why should you install jasmine globally?
+    - Doesn't hurt. Same principle as above.
+
 ## License
 
 MIT
