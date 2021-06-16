@@ -8,5 +8,6 @@ declare class Square implements SquareI {
     constructor(context: CanvasRenderingContext2D, side?: number);
     drawAt(point2d: Point2dI): SquareI;
 }
-export { Square, SquareI };
+export { Square };
+export type { SquareI };
 //# sourceMappingURL=Square.d.ts.map

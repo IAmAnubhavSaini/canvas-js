@@ -20,5 +20,9 @@ class Square implements SquareI {
 }
 
 export {
-    Square, SquareI
+    Square
+};
+
+export type {
+    SquareI
 };

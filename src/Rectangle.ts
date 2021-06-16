@@ -22,5 +22,7 @@ class Rectangle implements RectangleI {
 }
 
 export {
-    Rectangle, RectangleI
+    Rectangle
 };
+
+export type {RectangleI};

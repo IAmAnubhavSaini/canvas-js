@@ -26,5 +26,6 @@ declare class Circle implements CircleI {
     fillAt(point: Point2dI): this;
     fillWith(fillPattern: StrokePatternT): this;
 }
-export { Circle, CircleI };
+export { Circle };
+export type { CircleI };
 //# sourceMappingURL=Circle.d.ts.map

@@ -9,5 +9,6 @@ declare class Rectangle implements RectangleI {
     constructor(context: CanvasRenderingContext2D, sideShort?: number, sideLong?: number);
     drawAt(point2d: Point2dI): RectangleI;
 }
-export { Rectangle, RectangleI };
+export { Rectangle };
+export type { RectangleI };
 //# sourceMappingURL=Rectangle.d.ts.map

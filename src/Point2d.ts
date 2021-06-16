@@ -45,4 +45,6 @@ class Point2d implements Point2dI {
     }
 }
 
-export {Point2d, Point2dI};
+export {Point2d};
+
+export type {Point2dI};

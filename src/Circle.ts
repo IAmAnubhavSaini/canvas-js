@@ -76,4 +76,6 @@ class Circle implements CircleI {
     }
 }
 
-export {Circle, CircleI};
+export {Circle};
+
+export type {CircleI};

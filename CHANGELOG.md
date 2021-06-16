@@ -1,5 +1,10 @@
 # Changes
 
+## v8.0.0 - 2021-06-17
+
+- Added Pencil
+- Removed a TypeScript related bug, exporting types separately now.
+
 ## v7.1.0 - 2021-06-16
 
 - Added Rectangle API (mimics Square)
