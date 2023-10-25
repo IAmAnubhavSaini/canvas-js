@@ -23,7 +23,7 @@ var Point2d = /** @class */ (function () {
         configurable: true
     });
     Point2d.prototype.toString = function () {
-        return "{" + this.x + ", " + this.y + "}"; // {x, y}
+        return "{".concat(this.x, ", ").concat(this.y, "}"); // {x, y}
     };
     Point2d.prototype.distanceFrom = function (other2DPoint) {
         return Math.sqrt(Math.pow(this.x - other2DPoint.X, 2) + Math.pow(this.y - other2DPoint.Y, 2));

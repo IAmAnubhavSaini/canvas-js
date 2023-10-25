@@ -1,5 +1,5 @@
 import { Point2dI } from "./Point2d";
-declare type StrokePatternT = string | CanvasGradient | CanvasPattern;
+type StrokePatternT = string | CanvasGradient | CanvasPattern;
 interface DrawPatternI {
     strokePattern: StrokePatternT;
     lineWidth: number;
