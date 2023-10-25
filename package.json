@@ -1,11 +1,11 @@
 {
     "name": "canvas-js",
-    "version": "8.0.0",
+    "version": "9.0.0",
     "description": "Library for HTML5 canvas.",
     "main": "src/index.js",
     "scripts": {
         "test": "node_modules/.bin/jasmine",
-        "build": "node_modules/.bin/tsc --project tsconfig.json"
+        "build": "node_modules/.bin/tsc --project tsconfig.json && bash ./scripts/build.sh"
     },
     "repository": {
         "type": "git",
