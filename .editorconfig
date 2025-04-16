@@ -1,13 +1,29 @@
-# http://editorconfig.org
+# https://raw.githubusercontent.com/IAmAnubhavSaini/.files/refs/heads/main/.editorconfig
+# curl https://raw.githubusercontent.com/IAmAnubhavSaini/.files/refs/heads/main/.editorconfig -o .editorconfig
+
 root = true
 
 [*]
-indent_style = space
-indent_size = 4
-end_of_line = lf
 charset = utf-8
-trim_trailing_whitespace = true
+end_of_line = lf
+indent_size = 4
+indent_style = space
 insert_final_newline = true
+max_line_length = 120
+trim_trailing_whitespace = true
 
 [*.md]
 trim_trailing_whitespace = false
+
+[{*.json,.*.yml}]
+indent_style = space
+indent_size = 2
+
+[*.json]
+insert_final_newline = false
+
+[Makefile]
+indent_style = tab
+
+[*.go]
+indent_style = tab

@@ -5,15 +5,13 @@ Library for easy HTML5 canvas development.
 - [GitHub](https://github.com/IAmAnubhavSaini/canvas-js)
 - [NPM](https://www.npmjs.com/package/canvas-js)
 
-> use v8
-
 ## Installation
 
 ```bash
-
-npm i canvas-js
-
+npm install canvas-js
 ```
+
+It comes with types.
 
 ## Usage
 
@@ -32,17 +30,8 @@ Check [doc/](./doc)
 - Square, SquareI
 - Rectangle, RectangleI
 
-## Development
-
-`npm i -g npm typescript jasmine`
-
-- Why should you install typescript globally?
-    - TS is 60MBs installation. This quickly adds up if you have multiple projects that depend up on it.
-- Why should you install jasmine globally?
-    - Doesn't hurt. Same principle as above.
-
 ## License
 
-MIT
+MIT License
 
-- &copy; 2016-2021 Anubhav
+Copyright (c) 2016-2025 Anubhav Saini
